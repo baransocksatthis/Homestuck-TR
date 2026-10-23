@@ -1,0 +1,98 @@
+# Protects "main" from accidental changes.
+# If anyone not listed in MAIN_KEEPERS changes main directly, this:
+#  1. moves their changes into "review" (so nothing is lost),
+#  2. puts main back the way it was,
+#  3. opens an issue explaining what happened.
+# The Approve button is never affected: GitHub does not start automations
+# for changes made by other automations.
+name: Guard main
+
+on:
+  push:
+    branches: [main]
+
+env:
+  # GitHub usernames allowed to change main directly, separated by spaces.
+  MAIN_KEEPERS: "baransocksatthis"
+
+concurrency:
+  group: guard-main
+  cancel-in-progress: false
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Check who changed main
+        id: who
+        env:
+          WHO: ${{ github.actor }}
+        run: |
+          who="$(echo "$WHO" | tr '[:upper:]' '[:lower:]')"
+          allowed=" $(echo "$MAIN_KEEPERS" | tr '[:upper:]' '[:lower:]') "
+          if [[ "$allowed" == *" $who "* ]]; then
+            echo "@$WHO is allowed to change main. Nothing to do." >> "$GITHUB_STEP_SUMMARY"
+            echo "allowed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "allowed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.who.outputs.allowed == 'false'
+        with:
+          fetch-depth: 0
+
+      - name: Move the changes to review and undo them on main
+        if: steps.who.outputs.allowed == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WHO: ${{ github.actor }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          set -uo pipefail
+          git config core.quotepath off
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin '+refs/heads/*:refs/remotes/origin/*'
+
+          current="$(git rev-parse origin/main)"
+
+          # main was just created, or an earlier run already put it back.
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || [ "$current" = "$BEFORE" ]; then
+            echo "Nothing to undo." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if ! git merge-base --is-ancestor "$BEFORE" "$current"; then
+            echo "Main was already put back by an earlier run. Nothing to undo." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          changes="$(git log --no-merges --format='- %h %s (%an)' "$BEFORE..$current")"
+          files="$(git diff --name-only "$BEFORE" "$current" | sed 's/^/- /')"
+
+          # 1. Move the changes into review.
+          git checkout -q -B review origin/review
+          if git merge -q --no-edit "$current" -m "Move changes from main (pushed by $WHO) into review"; then
+            git push -q origin review
+            where="They were moved into **review**, so nothing is lost."
+          else
+            git merge --abort || true
+            rescue="rescued-from-main-$(date -u +%Y%m%d-%H%M%S)"
+            git push -q origin "$current:refs/heads/$rescue"
+            where="They clashed with work already on review, so they were saved on a separate branch called **$rescue** instead. Nothing is lost. The admin can move them into review with GitHub Desktop: switch to **review**, then **Branch → Merge into current branch** → pick **$rescue**."
+          fi
+
+          # 2. Put main back (only if nobody changed it again in the meantime).
+          if ! git push -q --force-with-lease="main:$current" origin "$BEFORE:main"; then
+            echo "❌ Main changed again while this was running. It will be handled by the next run." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          # 3. Tell everyone what happened.
+          body="$(printf '@%s changed **main** directly. Only the Approve button (or: %s) may change main, so the change was undone automatically.\n\n%s\n\n**Changes:**\n%s\n\n**Files:**\n%s\n\n---\n**@%s, what to do now:** open GitHub Desktop, click **Current branch** at the top and pick **review**. Always work on review. If GitHub Desktop asks you to pull or push main, ignore it.' \
+            "$WHO" "$MAIN_KEEPERS" "$where" "$changes" "$files" "$WHO")"
+          gh issue create --title "Change to main by @$WHO was undone" --body "$body"
+          printf '%s\n' "$body" >> "$GITHUB_STEP_SUMMARY"
