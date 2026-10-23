@@ -1,0 +1,89 @@
+# Once a week, opens (or updates) one issue listing work that has been waiting too long:
+#  - pages finished on "review" that have not been approved into "main"
+#  - personal branches with work that was never sent to "review"
+# When nothing is waiting, the issue is closed.
+name: Weekly reminder
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 1" # Mondays at 08:00 UTC
+
+env:
+  DAYS: 14 # how many days counts as "waiting too long"
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find waiting work
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          git config core.quotepath off
+          git fetch -q origin '+refs/heads/*:refs/remotes/origin/*'
+          now=$(date +%s)
+          limit=$(( now - DAYS * 86400 ))
+          body=""
+
+          # 1. Files that differ between review and main, last edited more than DAYS ago.
+          waiting=""
+          count=0
+          while IFS= read -r -d '' f; do
+            t=$(git log -1 --format=%ct origin/review -- "$f")
+            [ -z "$t" ] && t=$(git log -1 --format=%ct origin/main -- "$f")
+            if [ -n "$t" ] && [ "$t" -lt "$limit" ]; then
+              count=$((count + 1))
+              waiting+="$t"$'\t'"$f"$'\n'
+            fi
+          done < <(git diff -z --name-only origin/main origin/review -- . ':!.github' ':!.obsidian')
+
+          if [ "$count" -gt 0 ]; then
+            body+="### Waiting for review: $count file(s) unchanged for $DAYS+ days, not yet approved into main"$'\n\n'
+            body+="$(printf '%s' "$waiting" | sort -n | head -n 50 | while IFS=$'\t' read -r t f; do
+              echo "- \`$f\` — last edited $(( (now - t) / 86400 )) days ago"
+            done)"$'\n'
+            [ "$count" -gt 50 ] && body+="- …and $((count - 50)) more"$'\n'
+            body+=$'\n'"See everything that is waiting: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/main...review"$'\n\n'
+          fi
+
+          # 2. Personal branches with work not sent to review.
+          branches=""
+          for ref in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin/); do
+            case "$ref" in main|review|HEAD) continue ;; esac
+            ahead=$(git rev-list --count --no-merges "origin/review..origin/$ref")
+            [ "$ahead" -eq 0 ] && continue
+            oldest=$(git log --no-merges --reverse --format=%ct "origin/review..origin/$ref" | head -n1)
+            if [ "$oldest" -lt "$limit" ]; then
+              author=$(git log -1 --no-merges --format=%an "origin/review..origin/$ref")
+              branches+="- **$ref** ($author): $ahead change(s), oldest from $(( (now - oldest) / 86400 )) days ago — [send it for review](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/compare/review...$ref)"$'\n'
+            fi
+          done
+          if [ -n "$branches" ]; then
+            body+="### Personal branches with work never sent to review"$'\n\n'"$branches"$'\n'
+          fi
+
+          title="Weekly reminder: work waiting"
+          existing="$(gh issue list --state open --json number,title --jq ".[] | select(.title==\"$title\") | .number" | head -n1)"
+
+          if [ -z "$body" ]; then
+            echo "Nothing is waiting. 🎉" >> "$GITHUB_STEP_SUMMARY"
+            [ -n "$existing" ] && gh issue close "$existing" --comment "Nothing is waiting anymore. 🎉"
+            exit 0
+          fi
+
+          body="_Updated $(date -u +%F)._"$'\n\n'"$body"
+          printf '%s' "$body" >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$existing" ]; then
+            gh issue edit "$existing" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

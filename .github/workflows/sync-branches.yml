@@ -1,0 +1,76 @@
+# Keeps every branch up to date so nobody works on an old copy.
+#  1. Copies main into review (normally nothing to do, since main only gets work FROM review).
+#  2. Copies review into every personal branch.
+# If a personal branch can't be updated automatically, it is left alone and an issue is opened.
+name: Keep branches up to date
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *" # every night at 03:00 UTC
+
+concurrency:
+  group: sync-branches
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          git config core.quotepath off
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin '+refs/heads/*:refs/remotes/origin/*'
+
+          echo "## Keep branches up to date" >> "$GITHUB_STEP_SUMMARY"
+
+          # 1. main -> review. Main only ever receives work copied from review, so if the
+          #    same lines differ, review's version is the newer one and wins (-X ours).
+          git checkout -q -B review origin/review
+          if git merge -q --no-edit -X ours origin/main -m "Update review from main"; then
+            git push -q origin review && echo "- review: up to date" >> "$GITHUB_STEP_SUMMARY"
+          else
+            git merge --abort || true
+            echo "- ❌ review: could not be updated from main" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          # 2. review -> every personal branch
+          for ref in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin/); do
+            case "$ref" in main|review|HEAD) continue ;; esac
+
+            git checkout -q -B "$ref" "origin/$ref"
+            if git merge -q --no-edit origin/review -m "Update $ref from review"; then
+              if [ "$(git rev-parse HEAD)" != "$(git rev-parse "origin/$ref")" ]; then
+                git push -q origin "$ref"
+                echo "- $ref: updated" >> "$GITHUB_STEP_SUMMARY"
+              else
+                echo "- $ref: already up to date" >> "$GITHUB_STEP_SUMMARY"
+              fi
+            else
+              files="$(git diff --name-only --diff-filter=U | sed 's/^/- /')"
+              git merge --abort || true
+              echo "- ❌ $ref: conflict, left alone" >> "$GITHUB_STEP_SUMMARY"
+
+              title="Branch '$ref' could not be updated automatically"
+              body="$(printf 'The branch **%s** and **review** both changed the same lines in these files:\n\n%s\n\nNothing was lost — the branch was simply left as it was.\n\n**How to fix:** see *If something goes wrong* in the README, or ask the admin.' "$ref" "$files")"
+              existing="$(gh issue list --state open --json number,title --jq ".[] | select(.title==\"$title\") | .number" | head -n1)"
+              if [ -n "$existing" ]; then
+                gh issue comment "$existing" --body "Still happening on $(date -u +%F). $body"
+              else
+                gh issue create --title "$title" --body "$body"
+              fi
+            fi
+          done

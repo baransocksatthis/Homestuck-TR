@@ -1,0 +1,15 @@
+# Ignore backup
+/TranslateTest/
+
+# Ignore user-specific layout and workspace states
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/workspace.json.bak
+
+# Ignore Obsidian trash
+/.trash/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

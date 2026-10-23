@@ -1,0 +1,96 @@
+# Copies finished, reviewed work from the "review" branch into "main".
+# The reviewer runs this by hand: Actions tab -> "Approve work" -> Run workflow.
+name: Approve work (copy review -> main)
+
+on:
+  workflow_dispatch:
+    inputs:
+      what:
+        description: >-
+          Which files or folders to approve? Separate with commas.
+          Example: Chapter 1, 1674.md   (type EVERYTHING to approve all of it)
+        required: true
+        type: string
+
+concurrency:
+  group: approve
+  cancel-in-progress: false
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Copy approved files from review into main
+        env:
+          WHAT: ${{ inputs.what }}
+          WHO: ${{ github.actor }}
+        run: |
+          set -euo pipefail
+          git config core.quotepath off
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin review
+
+          echo "## Approve work" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$(echo "$WHAT" | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]')" = "EVERYTHING" ]; then
+            paths=(".")
+          else
+            IFS=',' read -ra raw <<< "$WHAT"
+            paths=()
+            for p in "${raw[@]}"; do
+              # trim spaces and any leading "./" or "/"
+              p="$(echo "$p" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's#^\./##' -e 's#^/##' -e 's#/$##')"
+              [ -n "$p" ] && paths+=("$p")
+            done
+          fi
+
+          failed=0
+          for p in "${paths[@]}"; do
+            in_review=0; in_main=0
+            git cat-file -e "origin/review:$p" 2>/dev/null && in_review=1
+            git cat-file -e "HEAD:$p" 2>/dev/null && in_main=1
+            if [ $in_review = 0 ] && [ $in_main = 0 ]; then
+              echo "- ❌ **$p** was not found. Check the spelling (capital letters and spaces matter)." >> "$GITHUB_STEP_SUMMARY"
+              failed=1
+              continue
+            fi
+            # Make main's copy exactly match review's copy (including deleted files).
+            git rm -r -q --ignore-unmatch -- "$p"
+            if [ $in_review = 1 ]; then
+              git checkout origin/review -- "$p"
+            fi
+            echo "- ✅ $p" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+          if [ $failed = 1 ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Nothing was copied, because some names were wrong. Fix them and run again." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          if git diff --cached --quiet; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Main already had exactly this version, so there was nothing new to copy." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          git commit -q -m "Approved by $WHO: $WHAT"
+          git push origin HEAD:main
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Copied into main." >> "$GITHUB_STEP_SUMMARY"
+
+  # After approving, bring every branch up to date.
+  sync:
+    needs: approve
+    permissions:
+      contents: write
+      issues: write
+    uses: ./.github/workflows/sync-branches.yml
