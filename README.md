@@ -116,9 +116,11 @@ If a personal branch has unsent work for more than 2 weeks, it shows up in the w
 
 ## For the admin (one-time setup on github.com)
 
+In **Settings → Actions → General**, tick **Allow GitHub Actions to create and approve pull requests**. The Approve button doesn't work without it.
+
 Behind the scenes, four automations live in `.github/workflows/`:
 
-- `approve.yml`: the reviewer's "Approve" button. Who may press it is set by `APPROVERS` at the top (GitHub usernames, separated by spaces).
+- `approve.yml`: the reviewer's "Approve" button. It sends the work to main through a pull request that it merges itself. Who may press it is set by `APPROVERS` at the top (GitHub usernames, separated by spaces).
 - `guard-main.yml`: undoes any change to main that didn't come from the Approve button, moves it to review, and opens an issue. People listed in `MAIN_KEEPERS` at the top are allowed to change main directly.
 - `sync-branches.yml`: keeps review and personal branches up to date (after every approval, and nightly).
 - `reminder.yml`: the Monday reminder issue. Change `DAYS: 14` in it to change what "waiting too long" means.
