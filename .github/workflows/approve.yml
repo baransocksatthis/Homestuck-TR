@@ -8,7 +8,7 @@ on:
       what:
         description: >-
           Which files or folders to approve? Separate with commas.
-          Example: Chapter 1, 1674.md   (type EVERYTHING to approve all of it)
+          Example: ACT 1, 248-300.md   (type EVERYTHING to approve all of it)
         required: true
         type: string
 
@@ -78,9 +78,23 @@ jobs:
             git cat-file -e "origin/review:$p" 2>/dev/null && in_review=1
             git cat-file -e "HEAD:$p" 2>/dev/null && in_main=1
             if [ $in_review = 0 ] && [ $in_main = 0 ]; then
-              echo "- ❌ **$p** was not found. Check the spelling (capital letters and spaces matter)." >> "$GITHUB_STEP_SUMMARY"
-              failed=1
-              continue
+              # Not a full path, so look for a file or folder with this name anywhere in review.
+              matches="$(git ls-tree -r -t --name-only origin/review | NAME="$p" awk -F/ '$NF == ENVIRON["NAME"]')"
+              count="$(printf '%s' "$matches" | grep -c '' || true)"
+              if [ "$count" = 0 ]; then
+                echo "- ❌ **$p** was not found. Check the spelling (capital letters and spaces matter)." >> "$GITHUB_STEP_SUMMARY"
+                failed=1
+                continue
+              fi
+              if [ "$count" != 1 ]; then
+                echo "- ❌ **$p** matches $count places. Type the full path of the one you mean:" >> "$GITHUB_STEP_SUMMARY"
+                printf '%s\n' "$matches" | sed 's/^/  - /' >> "$GITHUB_STEP_SUMMARY"
+                failed=1
+                continue
+              fi
+              p="$matches"
+              in_review=1
+              git cat-file -e "HEAD:$p" 2>/dev/null && in_main=1
             fi
             # Make main's copy exactly match review's copy (including deleted files).
             git rm -r -q --ignore-unmatch -- "$p"
