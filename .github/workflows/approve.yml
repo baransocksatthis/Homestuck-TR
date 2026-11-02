@@ -25,6 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - name: Check this person may approve
         env:
@@ -46,6 +47,8 @@ jobs:
 
       - name: Copy approved files from review into main
         env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           WHAT: ${{ inputs.what }}
           WHO: ${{ github.actor }}
         run: |
@@ -99,8 +102,25 @@ jobs:
             exit 0
           fi
 
+          # Main only accepts pull requests, so go through a temporary branch.
+          branch="approve/$GITHUB_RUN_ID"
+          git checkout -q -b "$branch"
           git commit -q -m "Approved by $WHO: $WHAT"
-          git push origin HEAD:main
+          git push -q origin "$branch"
+
+          if ! url="$(gh pr create --base main --head "$branch" --title "Approved by $WHO: $WHAT" --body "Opened by the Approve button.")"; then
+            git push -q origin --delete "$branch"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "❌ Nothing was copied. The automation could not open a pull request. Ask the admin to tick **Allow GitHub Actions to create and approve pull requests** in Settings → Actions → General." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          if ! gh pr merge "$url" --merge --delete-branch; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "❌ The pull request was opened but could not be merged, so nothing reached main yet. Ask the admin to look at it: $url" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "Copied into main." >> "$GITHUB_STEP_SUMMARY"
 
