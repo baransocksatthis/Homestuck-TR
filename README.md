@@ -74,10 +74,10 @@ Never edit **main** directly.
 1. On GitHub, open the **Actions** tab.
 2. On the left, click **Approve work (copy review → main)**.
 3. Click the **Run workflow** button on the right.
-4. Type what you want to approve, separated by commas. Use the folder or file names, with capitals and spaces exactly as they are. For example:
-   - `ACT 1`
-   - `1-100.md, 248-300.md`
-   - `Main File/ACT 1/1-100.md` (the full path also works)
+4. Type what you want to approve, separated by commas. Use the exact folder or file names, with capitals and spaces exactly as they are. For example:
+   - `Chapter 1`
+   - `1674.md, 1825-1847.md`
+   - `Chapter 1/1674.md`
    - `EVERYTHING` (approves all of it)
 5. Click the green **Run workflow** button.
 6. After a minute it shows a ✅ (done) or ❌ (click it to see why, usually a typo in a name).
