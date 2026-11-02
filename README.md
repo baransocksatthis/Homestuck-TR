@@ -47,7 +47,7 @@ You will only need Obsidian to do work on the project after you are done with th
 - Only edit your own assigned pages.
 - Always stay on the **review** branch.
   
-- Never switch to **main**. (If you change main by accident, it is undone automatically and your work is moved to review. An issue will tell you what happened.)
+- Never switch to **main**. GitHub will refuse anything you try to upload there.
 - Never delete the folder to "start fresh". Ask the admin instead.
 - Don't put Word, `.odt` or other non-text files in the folder. Git can't combine those if two people change them.
 
@@ -72,7 +72,7 @@ Never edit **main** directly.
 ### Approving work (copying it into main)
 
 1. On GitHub, open the **Actions** tab.
-2. On the left, click **Approve work (copy review → main)**.
+2. On the left, click **Prepare approval (review -> main)**.
 3. Click the **Run workflow** button on the right.
 4. Type what you want to approve, separated by commas. Use the exact folder or file names, with capitals and spaces exactly as they are. For example:
    - `Chapter 1`
@@ -81,8 +81,11 @@ Never edit **main** directly.
    - `EVERYTHING` (approves all of it)
 5. Click the green **Run workflow** button.
 6. After a minute it shows a ✅ (done) or ❌ (click it to see why, usually a typo in a name).
+7. Open the **Pull requests** tab and click the new pull request.
+8. Open **Files changed**, read the changes, then click **Review changes → Approve → Submit review**.
+9. Go back to the **Conversation** tab, click **Merge pull request** and confirm it. Use **Create a merge commit** if GitHub offers a choice.
 
-Only people on the approvers list can do this. Anyone else gets a ❌ saying "Not allowed".
+Only reviewers can do steps 8 and 9. Reviewers are the people listed in `.github/CODEOWNERS`.
 
 Approving copies the **current** version of those files from review to main.
 If someone keeps editing a page after you approved it, approve it again later.
@@ -108,7 +111,7 @@ If a personal branch has unsent work for more than 2 weeks, it shows up in the w
 |---|---|
 | Obsidian says something about a **conflict** | Someone else edited the same page. Open the page and look for lines like `<<<<<<<`, `=======` and `>>>>>>>`. Keep the text you want, delete those marker lines, save. If unsure, **stop and ask the admin.** |
 | An issue says **"Branch 'x' could not be updated automatically"** | Nothing is lost. The admin fixes it in GitHub Desktop: switch to that branch → **Branch → Update from review** → resolve the files it lists. |
-| An issue says **"Change to main by @x was undone"** | Nothing is lost. That person should switch GitHub Desktop back to **review**. The issue says where their work went. |
+| An upload to **main** was **rejected** | Nothing is lost. Your work is still on your computer. Don't try again. Ask the admin to help move it to **review**. |
 | Obsidian says **"git not found"** | Git for Windows isn't installed. Install it (step 1 of setup) and restart Obsidian. |
 | Anything else | Don't delete anything. Take a screenshot and send it to the admin. |
 
@@ -116,11 +119,14 @@ If a personal branch has unsent work for more than 2 weeks, it shows up in the w
 
 ## For the admin (one-time setup on github.com)
 
-In **Settings → Actions → General**, tick **Allow GitHub Actions to create and approve pull requests**. The Approve button doesn't work without it.
+- In **Settings → Actions → General**, tick **Allow GitHub Actions to create and approve pull requests**. The Prepare approval button doesn't work without it.
+- In **Settings → General**, tick **Automatically delete head branches**, so finished approvals clean up after themselves.
+- In **Settings → Rules → Rulesets → Main Protection**, target `main` and require 1 approval and review from Code Owners.
 
-Behind the scenes, four automations live in `.github/workflows/`:
+To add a reviewer, invite them as a collaborator, then add their username to `.github/CODEOWNERS` on **main**.
 
-- `approve.yml`: the reviewer's "Approve" button. It sends the work to main through a pull request that it merges itself. Who may press it is set by `APPROVERS` at the top (GitHub usernames, separated by spaces).
-- `guard-main.yml`: undoes any change to main that didn't come from the Approve button, moves it to review, and opens an issue. People listed in `MAIN_KEEPERS` at the top are allowed to change main directly.
+Behind the scenes, three automations live in `.github/workflows/`:
+
+- `approve.yml`: the Prepare approval button. It copies the chosen files from review into a pull request for main.
 - `sync-branches.yml`: keeps review and personal branches up to date (after every approval, and nightly).
 - `reminder.yml`: the Monday reminder issue. Change `DAYS: 14` in it to change what "waiting too long" means.

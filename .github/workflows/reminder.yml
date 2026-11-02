@@ -58,7 +58,7 @@ jobs:
           # 2. Personal branches with work not sent to review.
           branches=""
           for ref in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin/); do
-            case "$ref" in main|review|HEAD) continue ;; esac
+            case "$ref" in main|review|HEAD|approve/*) continue ;; esac
             ahead=$(git rev-list --count --no-merges "origin/review..origin/$ref")
             [ "$ahead" -eq 0 ] && continue
             oldest=$(git log --no-merges --reverse --format=%ct "origin/review..origin/$ref" | head -n1)

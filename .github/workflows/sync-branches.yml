@@ -5,7 +5,8 @@
 name: Keep branches up to date
 
 on:
-  workflow_call:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 3 * * *" # every night at 03:00 UTC
@@ -49,7 +50,7 @@ jobs:
 
           # 2. review -> every personal branch
           for ref in $(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin/); do
-            case "$ref" in main|review|HEAD) continue ;; esac
+            case "$ref" in main|review|HEAD|approve/*) continue ;; esac
 
             git checkout -q -B "$ref" "origin/$ref"
             if git merge -q --no-edit origin/review -m "Update $ref from review"; then
