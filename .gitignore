@@ -13,3 +13,6 @@
 # Ignore OS files
 .DS_Store
 Thumbs.db
+
+# Ignore personal suggestion history (different on every computer)
+.obsidian/plugins/various-complements/histories.json
