@@ -35,7 +35,7 @@ Kardanadam,felt üyesi,snowman
 Dikiş,felt üyesi,stitch
 Tezgah,felt üyesi,sawbuck
 Kibrit,felt üyesi,matchstick
-Eggs,felt üyesi,yumurta
+Yumurta,felt üyesi,Eggs
 Bisküvi,felt üyesi,Biscuits
 Bozukluk,felt üyesi,Quarters
 Konserve,felt üyesi,cans
