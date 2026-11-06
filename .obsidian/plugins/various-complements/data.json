@@ -64,7 +64,7 @@
     "insert as text": []
   },
   "propagateEsc": false,
-  "enableCurrentFileComplement": true,
+  "enableCurrentFileComplement": false,
   "currentFileMinNumberOfCharacters": 0,
   "onlyComplementEnglishOnCurrentFileComplement": false,
   "excludeCurrentFileWordPatterns": [],
@@ -76,7 +76,7 @@
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "excludeCurrentVaultWordPatterns": [],
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "Terminology/Terms.md",
+  "customDictionaryPaths": "Terms/Characters.md\nTerms/Items.md\nTerms/Jokes.md\nTerms/Races.md\nTerms/Sburb.md\nTerms/Session.md",
   "columnDelimiter": "Comma",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "",
