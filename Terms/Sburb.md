@@ -22,3 +22,5 @@ pernalya defteri,,phernelia registry
 holoçember,,holopad
 ulaşımlaştırıcı,,transportalizer
 cisimleştirici,,appearifier
+
+sunucu,,client
