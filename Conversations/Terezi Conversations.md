@@ -1,0 +1,47 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 4/1501-1600|1524]] · terezi / rose
+- [[Main File/ACT 4/1501-1600|1528]] · terezi / john
+- [[Main File/ACT 4/1501-1600|1579-1580]] · terezi / john
+- [[Main File/ACT 4/1601-1700|1604-1606]] · terezi / john
+- [[Main File/ACT 4/1601-1700|1633-1635]] · terezi / john
+- [[Main File/ACT 4/1601-1700|1657]] · terezi / davesprite
+- [[Main File/ACT 4/1601-1700|1684]] · terezi / john
+- [[Main File/ACT 4/1901-1942|1935]] · terezi / dave
+- [[Main File/ACT 4/1901-1942|1939]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2024]] · terezi / gamzee
+- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2055]] · terezi / nepeta
+- [[Main File/ACT 5/ACT 5 ACT 1/2058-2060|2058]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2061]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2082]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2086]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2237]] · terezi / vriska
+- [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2238]] · terezi / aradia
+- [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2256]] · terezi / doc scratch
+- [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2258]] · terezi / vriska
+- [[Main File/ACT 5/ACT 5 ACT 1/2501-2600|2574-2576]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2742]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2759]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2772]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2774-2783]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2833-2834]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3091-3098]] · terezi / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3427]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3469]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3476-3478]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 2/3601-3700|3698-3713]] · terezi / dave
+- [[Main File/ACT 6/ACT 6 ACT 2/4701-4800|4767-4778]] · terezi / aranea??? vriska???
+- [[Main File/ACT 6/ACT 6 ACT 3/5201-5300|5205-5217]] · terezi / dirk (ft. brain ghost dirk)
+- [[Main File/ACT 6/ACT 6 ACT 5/5901-6000|5927-5938]] · terezi / karkat / dave
+- [[Main File/ACT 6/ACT 6 ACT 5/6001-6100|6017-6021]] · terezi / dave / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6345-6375]] · terezi / rose / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6406-6410]] · terezi / rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6414-6416]] · terezi / rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6694-6699]] · terezi / gamzee / dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6701-6800|6756-6763]] · terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6701-6800|6776-6779]] · terezi / gamzee
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7001-7100|7001-7006]] · terezi / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7001-7100|7022-7058]] · terezi / roxy / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7101-7200|7171-7187]] · terezi / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7500-7501]] · terezi / vriska
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7901-8000|7939-7958]] · terezi / vriska. kinda (remem8er)

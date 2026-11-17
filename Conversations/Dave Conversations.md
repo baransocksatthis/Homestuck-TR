@@ -1,0 +1,79 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 1/1-100|26]] · dave / john
+- [[Main File/ACT 1/1-100|35]] · dave / john
+- [[Main File/ACT 1/1-100|39]] · dave / john
+- [[Main File/ACT 1/101-200|110]] · dave / john
+- [[Main File/ACT 1/201-247|204]] · dave / john
+- [[Main File/ACT 2/248-300|287]] · dave / john
+- [[Main File/ACT 2/248-300|294]] · dave / john
+- [[Main File/ACT 2/301-400|324]] · dave / john
+- [[Main File/ACT 2/301-400|333]] · dave / rose
+- [[Main File/ACT 2/301-400|382]] · dave / jade
+- [[Main File/ACT 2/301-400|386]] · dave / john
+- [[Main File/ACT 2/401-500|419]] · dave / rose
+- [[Main File/ACT 2/401-500|467]] · dave / john kinda
+- [[Main File/ACT 2/401-500|469]] · dave / rose
+- [[Main File/ACT 2/501-600|522]] · dave / rose
+- [[Main File/ACT 2/601-700|611]] · dave / rose
+- [[Main File/ACT 3/801-900|829]] · dave / jade
+- [[Main File/ACT 3/801-900|835]] · dave / jade
+- [[Main File/ACT 3/1001-1100|1071]] · dave
+- [[Main File/ACT 3/1001-1100|1087]] · dave / rose but not really
+- [[Main File/ACT 3/1001-1100|1099]] · dave / tavros
+- [[Main File/ACT 3/1101-1153|1148]] · dave / rose
+- [[Main File/ACT 4/1358-1400|1393]] · dave / jade
+- [[Main File/ACT 4/1358-1400|1399]] · dave / rose
+- [[Main File/ACT 4/1358-1400|1400]] · dave / jade
+- [[Main File/ACT 4/1401-1500|1401-1402]] · dave / rose
+- [[Main File/ACT 4/1401-1500|1438-1448]] · dave / jade
+- [[Main File/ACT 4/1501-1600|1505-1511]] · dave / jade
+- [[Main File/ACT 4/1501-1600|1563-1564]] · dave / jade
+- [[Main File/ACT 4/1501-1600|1588]] · dave / rose
+- [[Main File/ACT 4/1501-1600|1589]] · dave / kanaya
+- [[Main File/ACT 4/1501-1600|1595]] · dave / tavros
+- [[Main File/ACT 4/1601-1700|1637]] · dave / john
+- [[Main File/ACT 4/1601-1700|1642]] · dave / calsprite
+- [[Main File/ACT 4/1601-1700|1643]] · dave / rose
+- [[Main File/ACT 4/1601-1700|1646-1649]] · dave / john
+- [[Main File/ACT 4/1601-1700|1658]] · dave / davesprite
+- [[Main File/ACT 4/1601-1700|1666]] · dave / john
+- [[Main File/ACT 4/1601-1700|1692-1694]] · dave / john / davesprite
+- [[Main File/ACT 4/1801-1864|1857-1858]] · dave / rose
+- [[Main File/ACT 4/1801-1864|1861]] · dave / davesprite
+- [[Main File/ACT 4/1901-1942|1935]] · dave / terezi
+- [[Main File/ACT 4/1901-1942|1939]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2737]] · dave / john
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2742]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2772]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2774-2783]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2789]] · dave / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2818]] · dave / gamzee
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2825-2829]] · dave / equius
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2833-2834]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2835-2837]] · dave / davesprite
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2907]] · dave / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3024-3032]] · dave / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3036-3044]] · dave / rose
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3091-3098]] · dave / terezi
+- [[Main File/ACT 5/ACT 5 ACT 2/3101-3200|3141-3142]] · dave / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/3201-3300|3204]] · dave / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3481-3492]] · dave / aradia
+- [[Main File/ACT 5/ACT 5 ACT 2/3601-3700|3698-3713]] · dave / terezi
+- [[Main File/ACT 6/ACT 6 ACT 3/5301-5400|5400-5408]] · dave / rose / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 5/5901-6000|5927-5938]] · dave / karkat / terezi
+- [[Main File/ACT 6/ACT 6 ACT 5/5901-6000|5941]] · davesprite
+- [[Main File/ACT 6/ACT 6 ACT 5/6001-6100|6017-6021]] · dave / terezi / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6302-6323]] · dave / john / jade
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6383-6396]] · dave / jade (ft dirk but u cant read it)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6402-6404]] · dave / jade / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6622-6624]] · dave / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6653-6656]] · dave / rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6685-6689]] · dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6694-6699]] · dave / terezi / gamzee
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6701-6800|6718-6734]] · dave / jane
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6701-6800|6738-6739]] · dave / kanaya / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7487-7492]] · dave / john / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7601-7700|7673-7680]] · dave / dirk
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7701-7800|7734-7765]] · dave / dirk
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7901-8000|7917-7922]] · dave / dirk

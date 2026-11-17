@@ -1,0 +1,98 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 1/1-100|26]] · john / dave
+- [[Main File/ACT 1/1-100|35]] · john / dave
+- [[Main File/ACT 1/1-100|39]] · john / dave
+- [[Main File/ACT 1/1-100|63]] · john / rose
+- [[Main File/ACT 1/101-200|110]] · john / dave
+- [[Main File/ACT 1/101-200|135]] · john / rose
+- [[Main File/ACT 1/101-200|141-211]] · john / rose
+- [[Main File/ACT 1/101-200|169]] · john / jade
+- [[Main File/ACT 1/201-247|240-289]] · john / rose
+- [[Main File/ACT 2/248-300|287]] · john / dave
+- [[Main File/ACT 2/248-300|293]] · john / jade
+- [[Main File/ACT 2/248-300|294]] · john / dave
+- [[Main File/ACT 2/301-400|324]] · john / dave
+- [[Main File/ACT 2/301-400|386]] · john / dave
+- [[Main File/ACT 2/401-500|420-428]] · john / nannasprite
+- [[Main File/ACT 2/401-500|467]] · john / dave (kinda)
+- [[Main File/ACT 2/401-500|470-513]] · john / rose
+- [[Main File/ACT 2/501-600|538-539]] · john / rose
+- [[Main File/ACT 2/501-600|551]] · john / rose
+- [[Main File/ACT 2/601-700|622]] · john / rose
+- [[Main File/ACT 2/601-700|636]] · john / rose
+- [[Main File/ACT 2/601-700|643]] · john / rose
+- [[Main File/ACT 2/601-700|652]] · john / jade
+- [[Main File/ACT 3/801-900|880]] · john / rose
+- [[Main File/ACT 3/801-900|885]] · john / nannasprite
+- [[Main File/ACT 3/901-1000|1000]] · john / jade
+- [[Main File/ACT 3/1001-1100|1003-1004]] · john / rose
+- [[Main File/ACT 3/1001-1100|1022-1025]] · john / rose
+- [[Main File/ACT 3/1001-1100|1073-1074]] · john / jade
+- [[Main File/ACT 4/1358-1400|1391]] · john / jade
+- [[Main File/ACT 4/1358-1400|1394]] · john / karkat
+- [[Main File/ACT 4/1401-1500|1429]] · john / nannasprite
+- [[Main File/ACT 4/1501-1600|1523]] · john / rose
+- [[Main File/ACT 4/1501-1600|1525]] · john / jade
+- [[Main File/ACT 4/1501-1600|1528]] · john / terezi
+- [[Main File/ACT 4/1501-1600|1579-1580]] · john / terezi
+- [[Main File/ACT 4/1601-1700|1603]] · john / karkat
+- [[Main File/ACT 4/1601-1700|1604-1606]] · john / terezi
+- [[Main File/ACT 4/1601-1700|1633-1635]] · john / terezi
+- [[Main File/ACT 4/1601-1700|1637]] · john  / dave
+- [[Main File/ACT 4/1601-1700|1646-1649]] · john / dave
+- [[Main File/ACT 4/1601-1700|1666]] · john / dave
+- [[Main File/ACT 4/1601-1700|1667]] · john / karkat
+- [[Main File/ACT 4/1601-1700|1684]] · john / terezi
+- [[Main File/ACT 4/1601-1700|1692-1694]] · john / dave / davesprite
+- [[Main File/ACT 4/1701-1800|1714]] · john as rose / kanaya
+- [[Main File/ACT 4/1701-1800|1740]] · john / davesprite
+- [[Main File/ACT 4/1901-1942|1903-1907]] · john / karkat
+- [[Main File/ACT 4/1901-1942|1929-1930]] · john / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2628]] · john / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2653]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2661-2663]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2672-2674]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2682]] · john / rose
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2705]] · john / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2724-2725]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2732-2736]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2737]] · john / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2784]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2788]] · john / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2795-2802]] · john / nannasprite
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2868-2890]] · john / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2904]] · john / rose
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2921-2924]] · john / rose
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2925-2941]] · john  / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2974-2976]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3081]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3415-3419]] · john / jade
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3420-3422]] · john / karkat
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3466-3468]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3472-3475]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3493-3494]] · john / vriska
+- [[Main File/ACT 5/ACT 5 ACT 2/3601-3700|3689-3690]] · john / jade (kinda)
+- [[Main File/ACT 5/ACT 5 ACT 2/3801-3900|3849-3864]] · john / vriska ???
+- [[Main File/ACT 5/ACT 5 ACT 2/3801-3900|3865-3872]] · john / karkat
+- [[Main File/ACT 6/ACT 6 ACT 1/4201-4300|4295-4304]] · john / jade
+- [[Main File/ACT 6/ACT 6 ACT 1/4301-4390|4336-4346]] · john / jade (ft. davesprite)
+- [[Main File/ACT 6/ACT 6 ACT 2/4701-4800|4729-4739]] · john / jade (ft. jaspersprite)
+- [[Main File/ACT 6/ACT 6 ACT 2/4701-4800|4751-4758]] · john / meenah (ft. karkat/ dave)
+- [[Main File/ACT 6/ACT 6 ACT 3/5201-5300|5283-5307]] · john / jade
+- [[Main File/ACT 6/ACT 6 ACT 3/5301-5400|5382-5397]] · john / tavros / vriska
+- [[Main File/ACT 6/ACT 6 ACT 5/6201-6242|6208]] · john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6302-6323]] · john / dave / jade
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6345-6375]] · john / rose / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6402-6404]] · john / jade / dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6417-6434]] · john (ft. selfcest)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6450-6460]] · john / roxy
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 3/6901-6920|6919]] · john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/6921-7000|6953-6958]] · john / dirk
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/6921-7000|6970-6992]] · john / roxy / rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7001-7100|7001-7006]] · john / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7001-7100|7022-7058]] · john / roxy / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7101-7200|7102-7125]] · john / roxy
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7101-7200|7171-7187]] · john / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7487-7492]] · john / dave / karkat
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7501-7600|7513-7514]] · john / jake (ft. karkat / jasper/tavrosprite)

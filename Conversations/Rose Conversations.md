@@ -1,0 +1,66 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 1/1-100|63]] · rose / john
+- [[Main File/ACT 1/101-200|135]] · rose / john
+- [[Main File/ACT 1/101-200|141-211]] · rose / john
+- [[Main File/ACT 1/201-247|240-289]] · rose / john
+- [[Main File/ACT 2/301-400|333]] · rose / dave
+- [[Main File/ACT 2/401-500|419]] · rose / dave
+- [[Main File/ACT 2/401-500|442]] · rose / jade
+- [[Main File/ACT 2/401-500|469]] · rose / dave
+- [[Main File/ACT 2/401-500|470-513]] · rose / john
+- [[Main File/ACT 2/501-600|522]] · rose / dave
+- [[Main File/ACT 2/501-600|538-539]] · rose / john
+- [[Main File/ACT 2/501-600|551]] · rose / john
+- [[Main File/ACT 2/601-700|611]] · rose / dave
+- [[Main File/ACT 2/601-700|622]] · rose / john
+- [[Main File/ACT 2/601-700|636]] · rose / john
+- [[Main File/ACT 2/601-700|643]] · rose / john
+- [[Main File/ACT 3/801-900|838]] · rose / jade
+- [[Main File/ACT 3/801-900|880]] · rose / john
+- [[Main File/ACT 3/1001-1100|1003-1004]] · rose / john
+- [[Main File/ACT 3/1001-1100|1022-1025]] · rose / john
+- [[Main File/ACT 3/1001-1100|1093]] · rose / kanaya
+- [[Main File/ACT 3/1101-1153|1148]] · rose / dave
+- [[Main File/ACT 4/1358-1400|1399]] · rose / dave
+- [[Main File/ACT 4/1401-1500|1401-1402]] · rose / dave
+- [[Main File/ACT 4/1501-1600|1523]] · rose / john
+- [[Main File/ACT 4/1501-1600|1524]] · rose / terezi
+- [[Main File/ACT 4/1501-1600|1588]] · rose / dave
+- [[Main File/ACT 4/1501-1600|1590]] · rose / tavros
+- [[Main File/ACT 4/1501-1600|1592]] · rose / kanaya
+- [[Main File/ACT 4/1601-1700|1624-1626]] · rose / jaspersprite
+- [[Main File/ACT 4/1601-1700|1627-1630]] · rose / jade
+- [[Main File/ACT 4/1601-1700|1643]] · rose / dave
+- [[Main File/ACT 4/1601-1700|1653]] · rose / jade
+- [[Main File/ACT 4/1801-1864|1857-1858]] · rose / dave
+- [[Main File/ACT 4/1901-1942|1938]] · rose / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2682]] · rose / john
+- [[Main File/ACT 5/ACT 5 ACT 2/2626-2700|2692]] · rose / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2721-2722]] · rose / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/2701-2800|2726-2731]] · rose / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2805]] · rose / eridan
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2808-2809]] · rose / aradia
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2812]] · rose / nepeta
+- [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2816]] · rose / jaspersprite
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2904]] · rose / john
+- [[Main File/ACT 5/ACT 5 ACT 2/2901-3000|2921-2924]] · rose / john
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3036-3044]] · rose / dave
+- [[Main File/ACT 5/ACT 5 ACT 2/3001-3100|3045-3047]] · rose / kanaya
+- [[Main File/ACT 5/ACT 5 ACT 2/3601-3700|3627-3632]] · rose / doc scratch
+- [[Main File/ACT 5/ACT 5 ACT 2/3601-3700|3636-3638]] · rose / jade (ft. doc scratch)
+- [[Main File/ACT 6/ACT 6 ACT 3/5301-5400|5400-5408]] · rose / dave / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 3/5401-5437|5409-5421]] · rose / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 5/6001-6100|6055-6064]] · rose / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6345-6375]] · rose / terezi / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6406-6410]] · rose / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6411-6412]] · rose / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6414-6416]] · rose / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6653-6656]] · rose / dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6701-6800|6750-6755]] · rose / brain ghost dirk (and jake)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6801-6852|6809-6811]] · rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6801-6852|6829-6831]] · rose / jake
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/6921-7000|6970-6992]] · rose / roxy / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7493-7496]] · rose / roxy / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7601-7700|7647-7651]] · rose / jasprosesprite^2
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7701-7800|7714-7724]] · rose / jasprosesprite^2 / jane

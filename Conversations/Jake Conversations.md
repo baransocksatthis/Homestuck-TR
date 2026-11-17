@@ -1,0 +1,30 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4136]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4181]] · jake / calli
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4184-4185]] · jake / dirk (AR)
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4188]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4191-4192]] · jake / dirk (AR)
+- [[Main File/ACT 6/ACT 6 ACT 1/4201-4300|4208-4217]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 1/4201-4300|4225-4226]] · jake / roxy
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4586]] · jake / roxy
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4587-4593]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 3/4901-5000|4926-4931]] · jake / aranea (ft dirk)
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5015]] · jake / calli
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5057-5065]] · jake / dirk (AR)
+- [[Main File/ACT 6/ACT 6 ACT 3/5201-5300|5244-5250]] · jake / dirk (AR) ft. dirks severed head
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5514]] · jake / dirk
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5516]] · jake / erisolsprite
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5521-5531]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5658-5666]] · jake / roxy (kinda)
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5669-5682]] · jake / caliborn
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5691]] · jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 5/5701-5800|5716-5728]] · jake / jane (ft. erisolsprite)
+- [[Main File/ACT 6/ACT 6 ACT 5/5701-5800|5730-5743]] · jake / roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6440-6447]] · jake / jane / brain ghost dirk
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6501-6600|6572-6586]] · jake / aranea
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6801-6852|6829-6831]] · jake / rose
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7497-7499]] · jake / vriska / tavrosprite (ft. roxy)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7501-7600|7513-7514]] · jake / john (ft. karkat / jaspers/tavrosprite)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7801-7900|7810-7822]] · jake / tavrosprite / jasprosesprite^2)
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7801-7900|7825-7839]] · jake / vriska / tavrosprite (now gcatavrosprite)

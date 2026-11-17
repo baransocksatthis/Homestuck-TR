@@ -1,0 +1,33 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4156-4157]] · roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 1/4201-4300|4225-4226]] · roxy / jake
+- [[Main File/ACT 6/ACT 6 ACT 2/4401-4500|4432-4436]] · roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4401-4500|4488-4492]] · roxy / dirk (ft. AR)
+- [[Main File/ACT 6/ACT 6 ACT 2/4401-4500|4493-4500]] · roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4513-4514]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4550-4551]] · roxy / dirk
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4571]] · roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4586]] · roxy / jake
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5081]] · roxy / jane
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5081]] · roxy / dirk (AR)
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5082-5083]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5089-5094]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 4/5438-5500|5462-5466]] · roxy / caliborn
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5532-5540]] · roxy / fefetasprite / jane
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5582-5603]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5613-5625]] · roxy / calli (ft. rose)
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5635-5637]] · roxy / dirk (AR)
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5658-5666]] · roxy / jake. kinda
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5699-5701]] · roxy / jane. kinda
+- [[Main File/ACT 6/ACT 6 ACT 5/5701-5800|5730-5743]] · roxy / jake / jane
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6243-6300|6291-6298]] · roxy / jade
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6401-6474|6450-6460]] · roxy / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 2/6601-6700|6657-6669]] · roxy / jane / aranea
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/6921-7000|6970-6992]] · roxy / rose / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7001-7100|7022-7058]] · roxy / john / terezi
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/7101-7200|7102-7125]] · roxy / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7409-7500|7493-7496]] · roxy / rose / kanaya
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7601-7700|7694-7695]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7701-7800|7727-7732]] · roxy / calli
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7701-7800|7767-7783]] · roxy / kanaya

@@ -105,6 +105,16 @@ If a personal branch has unsent work for more than 2 weeks, it shows up in the w
 
 ---
 
+## Conversation lists
+
+The `Conversations` folder has one file per character (for example `John Conversations.md`) listing every page where they talk. Click a number to open the page file it's in.
+
+- **Never edit those files.** They are rebuilt automatically and your changes would be lost.
+- To add or fix a conversation, edit `Conversations/_masterdoc.md`. Keep the same style: `john / dave https://www.homestuck.com/story/26`, or `... story/141 - 211` for a range. A line in CAPITALS starts a new character.
+- The lists update by themselves a minute or two after the masterdoc or any page file changes, including when page files are split or renamed.
+
+---
+
 ## If something goes wrong
 
 | What you see | What to do |
@@ -125,8 +135,9 @@ If a personal branch has unsent work for more than 2 weeks, it shows up in the w
 
 To add a reviewer, invite them as a collaborator, then add their username to `.github/CODEOWNERS` on **main**.
 
-Behind the scenes, three automations live in `.github/workflows/`:
+Behind the scenes, four automations live in `.github/workflows/`:
 
 - `approve.yml`: the Prepare approval button. It copies the chosen files from review into a pull request for main.
 - `sync-branches.yml`: keeps review and personal branches up to date (after every approval, and nightly).
+- `conversations.yml`: rebuilds the lists in `Conversations/` from `_masterdoc.md` (script in `.github/scripts/`).
 - `reminder.yml`: the Monday reminder issue. Change `DAYS: 14` in it to change what "waiting too long" means.

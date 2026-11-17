@@ -1,0 +1,33 @@
+%% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
+
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4184-4185]] · dirk (AR) / jake
+- [[Main File/ACT 6/ACT 6 ACT 1/4113-4200|4191-4192]] · dirk (AR) / jake
+- [[Main File/ACT 6/ACT 6 ACT 1/4201-4300|4256-4259]] · dirk / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4401-4500|4454-4460]] · dirk / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4401-4500|4488-4492]] · dirk / roxy (ft. AR)
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4550-4551]] · dirk / roxy
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4553-4563]] · dirk / AR (ft. jane)
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4570]] · dirk (AR) / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4574-4576]] · dirk (AR) / jake
+- [[Main File/ACT 6/ACT 6 ACT 2/4501-4600|4594]] · dirk (AR) / jane
+- [[Main File/ACT 6/ACT 6 ACT 2/4601-4700|4646-4651]] · dirk / caliborn
+- [[Main File/ACT 6/ACT 6 ACT 3/4817-4900|4844-4877]] · dirk / jake 2024 the last free election edition
+- [[Main File/ACT 6/ACT 6 ACT 3/4901-5000|4956-4961]] · dirk (AR) / jane
+- [[Main File/ACT 6/ACT 6 ACT 3/4901-5000|4963-4982]] · dirk ( + AR) / caliborn
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5037-5045]] · dirk (AR) / jane
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5057-5065]] · dirk (AR) / jake
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5071-5075]] · dirk / caliborn
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5076-5077]] · dirk (AR) / dirk
+- [[Main File/ACT 6/ACT 6 ACT 3/5001-5100|5081]] · dirk (AR) / roxy
+- [[Main File/ACT 6/ACT 6 ACT 3/5201-5300|5205-5217]] · dirk (ft. brain ghost dirk) / terezi
+- [[Main File/ACT 6/ACT 6 ACT 3/5201-5300|5244-5250]] · dirk (AR) / jake ft. dirks severed head
+- [[Main File/ACT 6/ACT 6 ACT 5/5512-5600|5514]] · dirk / jake
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5635-5637]] · dirk (AR) / roxy
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5638-5645]] · dirk / AR
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5652-5653]] · dirk / equiusprite
+- [[Main File/ACT 6/ACT 6 ACT 5/5601-5700|5656-5657]] · dirk / arquiusprite
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6376-6381]] · dirk / arquiusprite
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 4/6921-7000|6953-6958]] · dirk / john
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7601-7700|7673-7680]] · dirk / dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7701-7800|7734-7765]] · dirk / dave
+- [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 5/7901-8000|7917-7922]] · dirk / dave

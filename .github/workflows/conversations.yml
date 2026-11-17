@@ -1,0 +1,60 @@
+# Rebuilds the character conversation lists in "Conversations/" from Conversations/_masterdoc.md.
+# Runs by itself whenever page files in "Main File" or the masterdoc change on review,
+# so every link keeps pointing at the file that holds that page now.
+name: Rebuild conversation lists
+
+on:
+  push:
+    branches: [review]
+    paths:
+      - "Main File/**"
+      - "Conversations/_masterdoc.md"
+      - ".github/scripts/build_conversations.py"
+      - ".github/workflows/conversations.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conversations
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild the lists
+        run: python .github/scripts/build_conversations.py
+
+      - name: Upload them if anything changed
+        run: |
+          git add Conversations
+          if git diff --cached --quiet; then
+            echo "Nothing changed." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Rebuild conversation lists"
+          # Someone may have uploaded in the meantime: catch up and try again.
+          for try in 1 2 3; do
+            if git push -q origin HEAD:review; then
+              echo "Conversation lists rebuilt." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            git pull -q --rebase origin review
+            python .github/scripts/build_conversations.py
+            git add Conversations
+            git diff --cached --quiet || git commit -q -m "Rebuild conversation lists"
+          done
+          echo "Could not upload after 3 tries. Run this action again from the Actions tab." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
