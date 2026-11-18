@@ -1,6 +1,6 @@
 %% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
 
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2085]] · aradia / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2085]] · aradia / solluxx
 - [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2139]] · aradia / kanaya
 - [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2144]] · aradia / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2146]] · aradia / sollux
