@@ -1,8 +1,8 @@
 %% Made automatically from _masterdoc.md. Don't edit this file: changes here get overwritten. Add new conversations to _masterdoc.md instead. %%
 
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2010]] · gamzee / karkat
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2024]] · gamzee / terezi
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2123]] · gamzee / tavros
+- [[Main File/ACT 5/ACT 5 ACT 1/2010-2018|2010]] · gamzee / karkat
+- [[Main File/ACT 5/ACT 5 ACT 1/2019-2026|2024]] · gamzee / terezi
+- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2123]] · gamzee / tavros
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2221]] · gamzee / equius
 - [[Main File/ACT 5/ACT 5 ACT 1/2401-2500|2475]] · gamzee / eridan
 - [[Main File/ACT 5/ACT 5 ACT 2/2801-2900|2818]] · gamzee / dave

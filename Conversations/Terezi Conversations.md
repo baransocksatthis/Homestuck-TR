@@ -9,12 +9,12 @@
 - [[Main File/ACT 4/1601-1700|1684]] · terezi / john
 - [[Main File/ACT 4/1901-1942|1935]] · terezi / dave
 - [[Main File/ACT 4/1901-1942|1939]] · terezi / dave
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2024]] · terezi / gamzee
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2055]] · terezi / nepeta
+- [[Main File/ACT 5/ACT 5 ACT 1/2019-2026|2024]] · terezi / gamzee
+- [[Main File/ACT 5/ACT 5 ACT 1/2048-2057|2055]] · terezi / nepeta
 - [[Main File/ACT 5/ACT 5 ACT 1/2058-2060|2058]] · terezi / karkat
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2061]] · terezi / karkat
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2082]] · terezi / sollux
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2086]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2068|2061]] · terezi / karkat
+- [[Main File/ACT 5/ACT 5 ACT 1/2075-2096|2082]] · terezi / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2075-2096|2086]] · terezi / sollux
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2237]] · terezi / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2238]] · terezi / aradia
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2256]] · terezi / doc scratch

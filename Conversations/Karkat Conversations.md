@@ -7,14 +7,14 @@
 - [[Main File/ACT 4/1601-1700|1667]] · karkat / john
 - [[Main File/ACT 4/1901-1942|1903-1907]] · karkat / john
 - [[Main File/ACT 4/1901-1942|1929-1930]] · karkat / john
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2010]] · karkat / gamzee
-- [[Main File/ACT 5/ACT 5 ACT 1/2001-2057|2027]] · karkat / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2010-2018|2010]] · karkat / gamzee
+- [[Main File/ACT 5/ACT 5 ACT 1/2027-2047|2027]] · karkat / sollux
 - [[Main File/ACT 5/ACT 5 ACT 1/2058-2060|2058]] · karkat / terezi
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2061]] · karkat / terezi
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2086]] · karkat / sollux
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2161]] · karkat / nepeta
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2177]] · karkat / tavros
-- [[Main File/ACT 5/ACT 5 ACT 1/2061-2200|2178]] · karkat / vriska
+- [[Main File/ACT 5/ACT 5 ACT 1/2061-2068|2061]] · karkat / terezi
+- [[Main File/ACT 5/ACT 5 ACT 1/2075-2096|2086]] · karkat / sollux
+- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2161]] · karkat / nepeta
+- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2177]] · karkat / tavros
+- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2178]] · karkat / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2296]] · karkat / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2401-2500|2470]] · karkat / sollux? kinda?
 - [[Main File/ACT 5/ACT 5 ACT 1/2501-2600|2567]] · karkat / kanaya
