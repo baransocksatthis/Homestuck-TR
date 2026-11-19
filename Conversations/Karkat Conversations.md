@@ -12,9 +12,9 @@
 - [[Main File/ACT 5/ACT 5 ACT 1/2058-2060|2058]] · karkat / terezi
 - [[Main File/ACT 5/ACT 5 ACT 1/2061-2068|2061]] · karkat / terezi
 - [[Main File/ACT 5/ACT 5 ACT 1/2075-2096|2086]] · karkat / sollux
-- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2161]] · karkat / nepeta
-- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2177]] · karkat / tavros
-- [[Main File/ACT 5/ACT 5 ACT 1/2101-2200|2178]] · karkat / vriska
+- 2161 (no page file for this page yet) · karkat / nepeta
+- 2177 (no page file for this page yet) · karkat / tavros
+- 2178 (no page file for this page yet) · karkat / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2201-2300|2296]] · karkat / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2401-2500|2470]] · karkat / sollux? kinda?
 - [[Main File/ACT 5/ACT 5 ACT 1/2501-2600|2567]] · karkat / kanaya
