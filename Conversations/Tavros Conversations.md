@@ -4,7 +4,7 @@
 - [[Main File/ACT 4/1501-1600|1590]] · tavros / rose
 - [[Main File/ACT 4/1501-1600|1595]] · tavros / dave
 - [[Main File/ACT 4/1901-1942|1936]] · tavros / jade
-- [[Main File/ACT 5/ACT 5 ACT 1/2101-2122|2122]] · tavros / vriska
+- [[Main File/ACT 5/ACT 5 ACT 1/2100-2122|2122]] · tavros / vriska
 - [[Main File/ACT 5/ACT 5 ACT 1/2123|2123]] · tavros / gamzee
 - 2164 (no page file for this page yet) · tavros / nepeta
 - 2168 (no page file for this page yet) · tavros / aradia
