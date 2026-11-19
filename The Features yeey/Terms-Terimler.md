@@ -12,3 +12,11 @@ buraya yazabilirsin (veya istediğin yere, the world is your oyster)
 
 
 "
+
+aradığın kelime listede yok mu? fear not!
+dosyayı editleyebilirsin!
+
+format:
+Türkçe Çeviri,Yazmak istediğin not,Original English Word
+
+Böylece gelecekte aynı şeyi çevirecek kişilere yardım etmiş olursun :)
