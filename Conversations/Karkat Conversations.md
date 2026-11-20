@@ -34,6 +34,7 @@
 - [[Main File/ACT 5/ACT 5 ACT 2/3401-3500|3469]] · karkat / terezi
 - [[Main File/ACT 5/ACT 5 ACT 2/3801-3900|3865-3872]] · karkat / john
 - [[Main File/ACT 5/ACT 5 ACT 2/4101-4108|4101-4104]] · karkat / jade
+- [[Main File/ACT 6/ACT 6 ACT 2/4601-4700|4685]] · karkat / karkat
 - [[Main File/ACT 6/ACT 6 ACT 5/5901-6000|5927-5938]] · karkat / dave / terezi
 - [[Main File/ACT 6/ACT 6 ACT 5/6001-6100|6017-6021]] · karkat / terezi / dave
 - [[Main File/ACT 6/ACT 6 ACT 6/ACT 6 ACT 6 ACT 1/6301-6400|6398-6399]] · karkat / kanaya / jane

@@ -346,6 +346,7 @@ karkat / equius https://www.homestuck.com/story/3431
 karkat / terezi https://www.homestuck.com/story/3469 
 karkat / john https://www.homestuck.com/story/3865 - 3872
 karkat / jade https://www.homestuck.com/story/4101 - 4104
+karkat / karkat https://www.homestuck.com/story/4685 
 karkat / dave / terezi https://www.homestuck.com/story/5927 - 5938
 karkat / terezi / dave https://www.homestuck.com/story/6017 - 6021 
 karkat / kanaya / jane https://www.homestuck.com/story/6398 - 6399 
@@ -598,15 +599,13 @@ jade / rose (ft. doc scratch) https://www.homestuck.com/story/3636 - 3638
 
 
 MEMOS 
-https://www.homestuck.com/story/2543
-https://www.homestuck.com/story/2547
-https://www.homestuck.com/story/2629
-https://www.homestuck.com/story/2754
-https://www.homestuck.com/story/2790
-https://www.homestuck.com/story/2852
-https://www.homestuck.com/story/3360 
-https://www.homestuck.com/story/3361 
-https://www.homestuck.com/story/4685 
+karkat / terezi / sollux / equius https://www.homestuck.com/story/2543
+karkat / eridan / vriska / tavros https://www.homestuck.com/story/2547
+terezi / karkat / nepeta / sollux / aradia / feferi / gamzee / vriska https://www.homestuck.com/story/2629
+terezi / tavros / equius / vriska / nepeta https://www.homestuck.com/story/2754
+karkat / dave / john https://www.homestuck.com/story/2790
+karkat / jade / dave https://www.homestuck.com/story/2852
+karkat / gamzee / feferi / eridan https://www.homestuck.com/story/3360 - 3361
 
 
 GROUP CONVOS ( 4+ )
