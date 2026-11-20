@@ -25,5 +25,8 @@ Thumbs.db
 # Ignore personal suggestion history (different on every computer)
 .obsidian/plugins/various-complements/histories.json
 
+# Ignore the sign-in prompt file the Git plugin creates when it asks for a GitHub username
+.obsidian/plugins/obsidian-git/.git_credentials_input
+
 # Ignore personal look of Obsidian (theme, font size, etc.)
 .obsidian/appearance.json
