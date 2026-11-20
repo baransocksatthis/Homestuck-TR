@@ -8,4 +8,4 @@ format şu:
 \<span style="color:#c00000">İstediğiniz yazı istediğiniz renk olabiliyor!!!\</span>
             ^ burası ne renk olduğunu seçiyor ve çok kafa yormayın derim :|
 
-Karakterlerin renk kodları:
+Karakterlerin renk kodları hemen 
