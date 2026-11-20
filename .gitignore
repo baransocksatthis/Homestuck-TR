@@ -14,6 +14,14 @@
 .DS_Store
 Thumbs.db
 
+# Plugins: only the ones listed with ! below get uploaded. Everything else people install stays on their own computer.
+# To share a new plugin with everyone, add a line like: !.obsidian/plugins/plugin-folder-name/
+.obsidian/plugins/*
+!.obsidian/plugins/obsidian-git/
+!.obsidian/plugins/various-complements/
+!.obsidian/plugins/colored-text/
+!.obsidian/plugins/character-colors/
+
 # Ignore personal suggestion history (different on every computer)
 .obsidian/plugins/various-complements/histories.json
 
