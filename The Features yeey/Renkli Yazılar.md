@@ -17,4 +17,5 @@ Eğer farklı renk istiyorsanız kendi elinizle istediğiniz renge çevirebilirs
 (yazarken '\\'leri kullanmayın)
 \<span style="color:#ff0000">kırmızı\</span>
 
-Eğer bundan sonra sık kullanılacak bir rengin eksik olduğunu fark ettiyseniz ya SPiercer'a yazın ya da kendiniz ekleyin! Renk kodları file'ı bu listenin oluşturulduğu yer oraya bir ekleme yaparsanız ve obsidian'ı yeniden başlatırsanız otomatik bir şekilde listeye eklenecektir ve gelecekte başkaları da eklediğiniz renkleri kullanabilir. 
+Eğer bundan sonra sık kullanılacak bir rengin eksik olduğunu fark ettiyseniz ya SPiercer'a yazın ya da kendiniz ekleyin! Renk kodları file'ı bu listenin oluşturulduğu yer oraya bir ekleme yaparsanız otomatik bir şekilde listeye eklenecektir ve gelecekte başkaları da eklediğiniz renkleri kullanabilir. 
+(listeye eklerken hex code kullanmanız lazım)

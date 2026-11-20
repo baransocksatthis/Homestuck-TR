@@ -1,7 +1,4 @@
-%% COLOR LIST for the "Color text as…" picker (Ctrl + R). %%
-%% One line per color: the names that use it, then the color code. Names before the first comma are the main name. %%
-%% A line with several color codes (like Trickster) becomes several numbered colors. %%
-%% Changes work the next time you open the picker. Lines without a color code are ignored. %%
+%% Ekleme yaparken #000000 formatında olduğundan emin olun yoksa yaptığınız eklentiyi görmezsiniz %%
 
 John Egbert, Tavrisprite #0715cd
 
