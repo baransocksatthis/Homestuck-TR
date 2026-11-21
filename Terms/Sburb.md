@@ -24,3 +24,9 @@ ulaşımlaştırıcı,,transportalizer
 cisimleştirici,,appearifier
 
 sunucu,,client
+
+
+%% Lands %%
+Rüzgar ve Gölgenin Diyarı,,land of wind and shade
+Işık ve Yağmurun Diyarı,,land of light and rain
+Sıcaklık ve Dakikliğin Diyarı,,land of heat and clockwork
