@@ -45,5 +45,6 @@ Ender Hüseyin,,andrew hussie
 Cicitoynak,,Maplehoof
 Bekerel,,becquerel
 Baloncuklar Vekili Bey Semenderiye,,viceroy bubbles von salamancer
+Huzur,,Serenity
 
 Anne Larva,,mother grub
