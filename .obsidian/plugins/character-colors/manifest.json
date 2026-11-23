@@ -1,9 +1,9 @@
 {
   "id": "character-colors",
   "name": "Character Colors",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minAppVersion": "1.0.0",
-  "description": "Color selected text with a character's color, picked from a searchable list kept in the note \"Renk Kodları.md\".",
+  "description": "Color selected text with a character's color, picked from a searchable list kept in notes you choose in its settings.",
   "author": "Homestuck-TR",
   "isDesktopOnly": false
 }
