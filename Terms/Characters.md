@@ -46,5 +46,6 @@ Cicitoynak,,Maplehoof
 Bekerel,,becquerel
 Baloncuklar Vekili Bey Semenderiye,,viceroy bubbles von salamancer
 Huzur,,Serenity
+Tiran Hazretleri,,His Tyranny
 
 Anne Larva,,mother grub
