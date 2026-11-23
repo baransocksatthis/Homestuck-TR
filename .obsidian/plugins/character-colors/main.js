@@ -17,7 +17,10 @@ const HEX = /#[0-9a-fA-F]{6}\b/g;
 const SPAN = /^<span style="color:\s*#[0-9a-fA-F]{3,8}">([\s\S]*)<\/span>$/;
 const ANY_COLOR_TAG = /<span style="color:\s*#[0-9a-fA-F]{3,8}">|<\/span>/g;
 // Things at the start of a line that must stay outside the color: quote marks, list bullets, checkboxes.
-const LINE_START = /^(\s*(?:>\s*)*(?:(?:[-*+]|\d+[.)])\s+)?(?:\[.\]\s+)?)([\s\S]*?)(\s*)$/;
+// A ">" only counts as a quote mark when a space follows it, so chat faces like ">:]" stay part of the text.
+const LINE_START = /^(\s*(?:>(?:[ \t]+|$))*(?:(?:[-*+]|\d+[.)])\s+)?(?:\[.\]\s+)?)([\s\S]*?)(\s*)$/;
+// Formatting tags that are allowed to stay real tags inside colored text. Every other < or > is plain text.
+const KEEP_TAG = /(<\/?(?:b|i|u|s|em|strong|sup|sub|mark|span)>|<br\s*\/?>|<span\s+style="[^"<>]*">)/i;
 
 /** Reads the color note into [{ hex, label }]. */
 function parseColors(text) {
@@ -56,6 +59,18 @@ function findListFiles(vault, setting) {
   return { files, missing };
 }
 
+/**
+ * Turns < and > that are part of the text (like <3 or >:]) into &lt; and &gt;, so they show up as
+ * written instead of being mistaken for the start or end of a tag. Real formatting tags are left alone,
+ * and text that was already escaped stays the same.
+ */
+function escapeText(text) {
+  return text
+    .split(KEEP_TAG)
+    .map((part, i) => (i % 2 ? part : part.replace(/</g, "&lt;").replace(/>/g, "&gt;")))
+    .join("");
+}
+
 /** Wraps every non-empty line of text in the color, replacing a color it already had. */
 function colorize(text, hex) {
   return text
@@ -66,7 +81,7 @@ function colorize(text, hex) {
       if (!body) return line;
       const inner = body.match(SPAN);
       const plain = inner && !inner[1].includes("<span") ? inner[1] : body;
-      return `${start}<span style="color:${hex}">${plain}</span>${end}`;
+      return `${start}<span style="color:${hex}">${escapeText(plain)}</span>${end}`;
     })
     .join("\n");
 }
@@ -245,4 +260,4 @@ class CharacterColors extends obsidian.Plugin {
 
 module.exports = CharacterColors;
 module.exports.default = CharacterColors;
-module.exports._test = { parseColors, colorize, uncolor, filterColors, findListFiles };
+module.exports._test = { parseColors, colorize, uncolor, filterColors, findListFiles, escapeText };
