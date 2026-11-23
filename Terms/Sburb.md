@@ -31,4 +31,4 @@ Rüzgar ve Gölgenin Diyarı,,land of wind and shade
 Işık ve Yağmurun Diyarı,,land of light and rain
 Sıcaklık ve Dakikliğin Diyarı,,land of heat and clockwork
 Buz ve Kurbağaların Diyarı,,land of frost and frogs
-Nabız ve Miyasma Diyarı,,land of pulse and haze
+Nabız ve Miyasma Diyarı,nabız ve sisten daha iyi bı tınısı var,land of pulse and haze
