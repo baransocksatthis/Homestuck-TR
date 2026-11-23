@@ -30,3 +30,4 @@ sunucu,,client
 Rüzgar ve Gölgenin Diyarı,,land of wind and shade
 Işık ve Yağmurun Diyarı,,land of light and rain
 Sıcaklık ve Dakikliğin Diyarı,,land of heat and clockwork
+Buz ve Kurbağaların Diyarı,,land of frost and frogs
