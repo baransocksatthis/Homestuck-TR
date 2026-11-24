@@ -1,22 +1,26 @@
 /*
  * Character Colors: colors the selected text with a character's color.
  *
- * The colors come from the note "Renk Kodları.md" (anywhere in the vault): one line per color,
- * the names first and the color code (#rrggbb) at the end. Lines with several codes become
- * numbered colors. The last 5 colors you used are remembered on your own computer only.
+ * The colors come from the notes listed in the plugin's settings (default: "Renk Kodları.md",
+ * anywhere in the vault): one line per color, the names first and the color code (#rrggbb) at the
+ * end. Lines with several codes become numbered colors. The last 5 colors you used are remembered
+ * on your own computer only.
  *
  * The text is wrapped as <span style="color:#rrggbb">text</span>, the same format the
  * Colored Text plugin writes, so both work on the same files.
  */
 const obsidian = require("obsidian");
 
-const LIST_FILE = "Renk Kodları.md";
+const DEFAULT_SETTINGS = { colorListPaths: "Renk Kodları.md" };
 const RECENT_COUNT = 5;
 const HEX = /#[0-9a-fA-F]{6}\b/g;
 const SPAN = /^<span style="color:\s*#[0-9a-fA-F]{3,8}">([\s\S]*)<\/span>$/;
 const ANY_COLOR_TAG = /<span style="color:\s*#[0-9a-fA-F]{3,8}">|<\/span>/g;
 // Things at the start of a line that must stay outside the color: quote marks, list bullets, checkboxes.
-const LINE_START = /^(\s*(?:>\s*)*(?:(?:[-*+]|\d+[.)])\s+)?(?:\[.\]\s+)?)([\s\S]*?)(\s*)$/;
+// A ">" only counts as a quote mark when a space follows it, so chat faces like ">:]" stay part of the text.
+const LINE_START = /^(\s*(?:>(?:[ \t]+|$))*(?:(?:[-*+]|\d+[.)])\s+)?(?:\[.\]\s+)?)([\s\S]*?)(\s*)$/;
+// Formatting tags that are allowed to stay real tags inside colored text. Every other < or > is plain text.
+const KEEP_TAG = /(<\/?(?:b|i|u|s|em|strong|sup|sub|mark|span)>|<br\s*\/?>|<span\s+style="[^"<>]*">)/i;
 
 /** Reads the color note into [{ hex, label }]. */
 function parseColors(text) {
@@ -33,6 +37,40 @@ function parseColors(text) {
   return colors;
 }
 
+/**
+ * Finds the notes named in the settings (one per line). A line can be a full path
+ * ("Folder/Renk Kodları.md") or just a file name, which is then found anywhere in the vault.
+ * The ".md" may be left out. Returns { files, missing }.
+ */
+function findListFiles(vault, setting) {
+  const files = [];
+  const missing = [];
+  const all = vault.getMarkdownFiles();
+  for (const raw of setting.split(/\r?\n/)) {
+    let entry = raw.trim().replace(/^\/+/, "");
+    if (!entry) continue;
+    if (!entry.toLowerCase().endsWith(".md")) entry += ".md";
+    const found =
+      all.find((f) => f.path === entry) ||
+      (entry.includes("/") ? null : all.find((f) => f.name === entry));
+    if (found && !files.includes(found)) files.push(found);
+    else if (!found) missing.push(raw.trim());
+  }
+  return { files, missing };
+}
+
+/**
+ * Turns < and > that are part of the text (like <3 or >:]) into &lt; and &gt;, so they show up as
+ * written instead of being mistaken for the start or end of a tag. Real formatting tags are left alone,
+ * and text that was already escaped stays the same.
+ */
+function escapeText(text) {
+  return text
+    .split(KEEP_TAG)
+    .map((part, i) => (i % 2 ? part : part.replace(/</g, "&lt;").replace(/>/g, "&gt;")))
+    .join("");
+}
+
 /** Wraps every non-empty line of text in the color, replacing a color it already had. */
 function colorize(text, hex) {
   return text
@@ -43,7 +81,7 @@ function colorize(text, hex) {
       if (!body) return line;
       const inner = body.match(SPAN);
       const plain = inner && !inner[1].includes("<span") ? inner[1] : body;
-      return `${start}<span style="color:${hex}">${plain}</span>${end}`;
+      return `${start}<span style="color:${hex}">${escapeText(plain)}</span>${end}`;
     })
     .join("\n");
 }
@@ -106,8 +144,39 @@ class ColorPicker extends obsidian.SuggestModal {
   }
 }
 
+class SettingsTab extends obsidian.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    new obsidian.Setting(containerEl)
+      .setName("Renk listesi dosyaları")
+      .setDesc(
+        "Renklerin okunduğu notlar, her satıra bir tane. Tam yol (ör. Klasör/Renk Kodları.md) ya da sadece dosya adı " +
+          "yazabilirsiniz; sadece ad yazılırsa kasanın her yerinde aranır. Değişiklikler hemen geçerli olur."
+      )
+      .addTextArea((text) => {
+        text
+          .setPlaceholder(DEFAULT_SETTINGS.colorListPaths)
+          .setValue(this.plugin.settings.colorListPaths)
+          .onChange(async (value) => {
+            this.plugin.settings.colorListPaths = value;
+            await this.plugin.saveData(this.plugin.settings);
+          });
+        text.inputEl.rows = 5;
+        text.inputEl.style.width = "100%";
+      });
+  }
+}
+
 class CharacterColors extends obsidian.Plugin {
   async onload() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    this.addSettingTab(new SettingsTab(this.app, this));
     this.addCommand({
       id: "color-as",
       name: "Color text as…",
@@ -138,14 +207,16 @@ class CharacterColors extends obsidian.Plugin {
   }
 
   async openPicker(editor) {
-    const file = this.app.vault.getFiles().find((f) => f.name === LIST_FILE);
-    if (!file) {
-      new obsidian.Notice(`"${LIST_FILE}" bulunamadı. Renk listesi bu isimde bir notta olmalı.`);
-      return;
+    const setting = this.settings.colorListPaths.trim() ? this.settings.colorListPaths : DEFAULT_SETTINGS.colorListPaths;
+    const { files, missing } = findListFiles(this.app.vault, setting);
+    if (missing.length) {
+      new obsidian.Notice(`Character Colors: bulunamadı: ${missing.join(", ")}. Ayarlardaki dosya adlarını kontrol edin.`);
     }
-    const colors = parseColors(await this.app.vault.cachedRead(file));
+    if (!files.length) return;
+    const colors = [];
+    for (const file of files) colors.push(...parseColors(await this.app.vault.cachedRead(file)));
     if (!colors.length) {
-      new obsidian.Notice(`"${LIST_FILE}" içinde renk kodu yok (ör. #0715cd).`);
+      new obsidian.Notice(`Renk listesinde renk kodu yok (ör. #0715cd): ${files.map((f) => f.path).join(", ")}`);
       return;
     }
     new ColorPicker(this, editor, colors).open();
@@ -189,4 +260,4 @@ class CharacterColors extends obsidian.Plugin {
 
 module.exports = CharacterColors;
 module.exports.default = CharacterColors;
-module.exports._test = { parseColors, colorize, uncolor, filterColors };
+module.exports._test = { parseColors, colorize, uncolor, filterColors, findListFiles, escapeText };
