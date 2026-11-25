@@ -4,3 +4,7 @@
 
 %% ts will be usefull in 7961 trust %%
 zaman dalaveresi,this is so worth it,time shenanigans
+
+%% gamzee'nin fucking ve motherfuckinglerini consistent tutmak biraz önemli %%
+amına kodumun,:o) honkhonkhonkhonk,motherfuckin
+kodumun,:o) honkhonkhonkhonk,fuckin
