@@ -20,3 +20,6 @@ lafazan,,pesterchum
 
 %% reoccurring shit %%
 reçine,kehribar'dan daha iyi,amber
+
+%% troll stuff %%
+çimhalkaları,,lawnring
