@@ -41,7 +41,6 @@ Bozukluk,felt üyesi,Quarters
 Konserve,felt üyesi,cans
 
 %% Side Characters %%
-Ender Hüseyin,,andrew hussie
 Cicitoynak,,Maplehoof
 Bekerel,,becquerel
 Baloncuklar Vekili Bey Semenderiye,,viceroy bubbles von salamancer
