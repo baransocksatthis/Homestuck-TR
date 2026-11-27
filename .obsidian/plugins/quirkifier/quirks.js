@@ -22,14 +22,46 @@
  *   lower(text)                  small letters: "IŞIK" → "ışık", "İ" → "i"
  *   isLetter(ch)                 true for letters, Turkish ones included
  *   swap(text, { a: "4" })       swaps single characters using a table
- *   eachLetter(text, (ch, n) => ...)
+ *   eachLetter(text, (ch, n, w) => ...)
  *                                runs on every letter; n counts letters only (0, 1, 2, ...),
- *                                so spaces and punctuation don't count
+ *                                so spaces and punctuation don't count.
+ *                                w is the letter's place inside its word: w === 0 means it is
+ *                                the first letter of a word ("Karkat'ın" is one word).
+ *                                Example, capitalise every word:
+ *                                  eachLetter(line, (ch, n, w) => (w === 0 ? upper(ch) : ch))
+ *   insertAt(text, i, piece)     puts piece before character number i (counting from 0):
+ *                                  insertAt("hey", 1, "e")  → "heey"
+ *                                  insertAt("hey", 0, "o")  → "ohey"
+ *                                  insertAt("hey", -1, "e") → "heey"  (negative counts from the end)
+ *                                To double letters while going through them, eachLetter can
+ *                                also just return ch + ch.
+ *   isWordStart(text, i)         true if character number i of text starts a word
+ *                                (for when you go through the line yourself, e.g. with
+ *                                Array.from(line).map((ch, i) => ...))
  *
  * Normal JavaScript works too, e.g. line.replace(/ben/g, "b3n") or line.split(" ").
  */
 
 module.exports = [
+
+  {
+    name: "Aradia Megido",
+    description: "Küçük harf, 'o,ö' = '0'",
+    search: "aradia megido",
+    quirk(line) {
+      return swap(lower(line), { o: "0", ö: "0" });
+    }
+  },
+
+  {
+    name: "Tavros Nitram",
+    description: "Büyük harf ters, '.' = ','",
+    search: "tavros nitram",
+    quirk(line) {
+      return swap(eachLetter(line, (ch,n) => (ch == upper(ch) ? lower(ch) : upper(ch))), { ".": "," });
+    }
+  },
+
   {
     name: "Alternating caps",
     description: "Harfler sırayla küçük ve büyük olur: mErHaBa",

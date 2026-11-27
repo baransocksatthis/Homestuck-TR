@@ -48,12 +48,44 @@ const helpers = {
     Array.from(text)
       .map((ch) => (Object.prototype.hasOwnProperty.call(table, ch) ? table[ch] : ch))
       .join(""),
-  /** Runs fn(letter, n) on every letter, where n counts letters only (0, 1, 2, ...). */
+  /**
+   * Runs fn(letter, n, w) on every letter. n counts letters only (0, 1, 2, ...) across the line;
+   * w counts letters inside the current word, so w === 0 means the letter starts a word.
+   * Numbers and an apostrophe between letters (Karkat'ın) count as part of the word.
+   */
   eachLetter: (text, fn) => {
+    const chars = Array.from(text);
     let n = 0;
-    return Array.from(text)
-      .map((ch) => (/\p{L}/u.test(ch) ? fn(ch, n++) : ch))
+    let w = 0;
+    return chars
+      .map((ch, i) => {
+        if (/\p{L}/u.test(ch)) return fn(ch, n++, w++);
+        const inWord =
+          /\p{N}/u.test(ch) ||
+          (/['’]/.test(ch) && /[\p{L}\p{N}]/u.test(chars[i - 1] || "") && /\p{L}/u.test(chars[i + 1] || ""));
+        if (!inWord) w = 0;
+        return ch;
+      })
       .join("");
+  },
+  /**
+   * Puts piece into text before character number i (counting from 0): insertAt("hey", 1, "e") → "heey".
+   * A negative i counts from the end: insertAt("hey", -1, "e") → "heey". Past the end, it adds at the end.
+   */
+  insertAt: (text, i, piece) => {
+    const chars = Array.from(text);
+    const at = i < 0 ? Math.max(0, chars.length + i) : Math.min(i, chars.length);
+    chars.splice(at, 0, piece);
+    return chars.join("");
+  },
+  /** True if position i of text is the first letter of a word. */
+  isWordStart: (text, i) => {
+    const chars = Array.from(text);
+    if (!/\p{L}/u.test(chars[i] || "")) return false;
+    const prev = chars[i - 1] || "";
+    if (/[\p{L}\p{N}]/u.test(prev)) return false;
+    if (/['’]/.test(prev) && /[\p{L}\p{N}]/u.test(chars[i - 2] || "")) return false;
+    return true;
   },
 };
 
